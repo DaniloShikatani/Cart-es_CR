@@ -70,7 +70,7 @@ if uploaded_file:
             elif 'PAGSEGURO' in historico: return 'PAGSEGURO'
             elif 'PAGSEG' in historico: return 'TEDPAGSEG'
             elif 'FISERV' in historico or 'FISERV' in documento: return 'BIN'
-            elif '0069' in COD.historic: return 'BIN'
+            elif '0069' in cod historic: return 'BIN'
             elif 'SFPAY' in historico: return 'SFPAY'
             return None
 
@@ -133,4 +133,5 @@ if uploaded_file:
 
     except Exception as e:
         st.error(f"❌ Erro ao processar o arquivo: {e}")
+
 
