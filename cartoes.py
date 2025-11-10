@@ -71,6 +71,7 @@ if uploaded_file:
             elif 'PAGSEG' in historico: return 'TEDPAGSEG'
             elif 'FISERV' in historico or 'FISERV' in documento: return 'BIN'
             elif 'SFPAY' in historico: return 'SFPAY'
+            elif 'SISPAG' in historico: return 'BIN'
             return None
 
         df_filtered['Historico'] = df_filtered.apply(
@@ -132,6 +133,7 @@ if uploaded_file:
 
     except Exception as e:
         st.error(f"❌ Erro ao processar o arquivo: {e}")
+
 
 
 
